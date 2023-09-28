@@ -30,11 +30,8 @@
   <script>
     window.gameVersion = '0.99.2';
   </script>
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
-  <!-- Small Login Button in the Top Left Corner -->
-  <button class="login-button" onclick="openLoginDialog()">Login</button>
   <div class="ui">
     <div class="ui__background"></div>
     <div class="ui__game"></div>
@@ -119,20 +116,6 @@
         'cache-version': window.gameVersion,
         'content-url': 'index.html',
         'assets': [ 'assets/css/styles.css', 'assets/js/three.js', 'assets/js/cube.js' ]
-      });
-    }
-  </script>
-  <!-- JavaScript for Netlify Identity Integration -->
-  <script>
-    function openLoginDialog() {
-      window.netlifyIdentity.open();
-    }
-
-    if (window.netlifyIdentity) {
-      window.netlifyIdentity.on("init", user => {
-        if (!user) {
-          // Redirect to the login page or handle authentication state as needed.
-        }
       });
     }
   </script>
