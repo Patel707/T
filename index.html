@@ -90,6 +90,9 @@
       </div>
     </div>
     <div class="ui__buttons">
+        <button class="btn btn--br btn--reset" onclick="resetCube()">
+    Reset Cube
+        </button>
       <button class="btn btn--bl btn--stats">
         <icon trophy></icon>
       </button>
@@ -117,6 +120,10 @@
         'content-url': 'index.html',
         'assets': [ 'assets/css/styles.css', 'assets/js/three.js', 'assets/js/cube.js' ]
       });
+    }
+  </script>
+  <script>function resetCube() {
+  console.log("Cube reset to initial position:", initialCubeState);
     }
   </script>
 </body>
